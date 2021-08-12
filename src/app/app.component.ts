@@ -1,7 +1,7 @@
 import { NumberFormatStyle } from '@angular/common';
 import { CompileTemplateMetadata } from '@angular/compiler';
 import { Component } from '@angular/core';
-import { count } from 'console';
+// import { count } from 'console';
 import { TODOinterface } from './todointerface';
 
 @Component({
@@ -53,20 +53,20 @@ export class AppComponent {
     this.todolist.push(newTask);
   }
 
-  completeList(): boolean
-  {
-    this.todolist.forEach(element => 
-      {
-      if(element.completed == true)
-      {
-        let completed = true;
-        return completed; //string of Congrats
-      }
-      else()
-      {
-        let countTask: number;
-        countTask = element.completed
-        return countTask; //number of false
-      }
-  }
+  // completeList(): boolean
+  // {
+  //   this.todolist.forEach(element => 
+  //     {
+  //     if(element.completed == true)
+  //     {
+  //       let completed = true;
+  //       return completed; //string of Congrats
+  //     }
+  //     else()
+  //     {
+  //       let countTask: number;
+  //       countTask = element.completed
+  //       return countTask; //number of false
+  //     }
+  // }
 }

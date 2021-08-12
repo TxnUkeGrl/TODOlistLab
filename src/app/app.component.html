@@ -1,13 +1,13 @@
-<div *ngIf="">
-Congra
-</div>
 <div *ngFor="let honeydew of getTODOlist()">
-  <h2>{{honeydew.task}}</h2>
-  <p>{{honeydew.completed}}</p>
+  <!-- <div *ngIf="honeydew.completed = false">
+  Congrats!
+  </div> -->
+  <h3>Task: {{honeydew.task}}</h3>
+  <p>Completed: {{honeydew.completed}}</p>
   <div *ngIf="!honeydew.completed">
     <button (click) =completeTask(honeydew.task)>Completed</button>
   </div>
 </div>
-<label for="item-input">New task:</label>
+<label for="item-input"><h3>New task:</h3></label>
 <input type="text" id="item-input" #newItem>
 <button (click)="addTask(newItem.value)">Add to List</button>
