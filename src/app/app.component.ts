@@ -53,20 +53,17 @@ export class AppComponent {
     this.todolist.push(newTask);
   }
 
-  // completeList(): boolean
-  // {
-  //   this.todolist.forEach(element => 
-  //     {
-  //     if(element.completed == true)
-  //     {
-  //       let completed = true;
-  //       return completed; //string of Congrats
-  //     }
-  //     else()
-  //     {
-  //       let countTask: number;
-  //       countTask = element.completed
-  //       return countTask; //number of false
-  //     }
-  // }
+ completeList(): boolean
+ {
+   let completed = true;
+
+   this.todolist.forEach(element => 
+     {
+     if(element.completed == false)
+     {
+       completed = false; //string of congrats
+     }
+         });
+         return completed;
+}
 }
