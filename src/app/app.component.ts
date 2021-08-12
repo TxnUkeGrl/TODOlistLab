@@ -1,5 +1,7 @@
 import { NumberFormatStyle } from '@angular/common';
+import { CompileTemplateMetadata } from '@angular/compiler';
 import { Component } from '@angular/core';
+import { count } from 'console';
 import { TODOinterface } from './todointerface';
 
 @Component({
@@ -32,19 +34,39 @@ export class AppComponent {
 
   completeTask(task: string): void
   {//this refers to the class it is within
-    this.todolist.forEach(element => {
+    this.todolist.forEach(element => 
+      {
       if(element.task == task){
         element.completed = true;
       }
     });
   }
 
-  addTask(task: string): void{
-    let newTask: TODOinterface = {
+  addTask(task: string): void
+  {
+    let newTask: TODOinterface = 
+    {
       task: task,
       completed: false
     };
 
     this.todolist.push(newTask);
+  }
+
+  completeList(): boolean
+  {
+    this.todolist.forEach(element => 
+      {
+      if(element.completed == true)
+      {
+        let completed = true;
+        return completed; //string of Congrats
+      }
+      else()
+      {
+        let countTask: number;
+        countTask = element.completed
+        return countTask; //number of false
+      }
   }
 }
