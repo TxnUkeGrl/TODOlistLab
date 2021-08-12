@@ -5,10 +5,15 @@
 <div *ngFor="let honeydew of getTODOlist()">
     <h3>Task: {{honeydew.task}}</h3>
   <p>Completed: {{honeydew.completed}}</p>
+
+  <button (click)="completeList">Delete Item?</button>
+  <!-- removeTask(deleteItem.index) -->
+
   <div *ngIf="!honeydew.completed">
     <button (click) =completeTask(honeydew.task)>Completed</button>
   </div>
 </div>
+
 <label for="item-input"><h3>New task:</h3></label>
 <input type="text" id="item-input" #newItem>
 <button (click)="addTask(newItem.value)">Add to List</button>

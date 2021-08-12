@@ -65,5 +65,14 @@ export class AppComponent {
      }
          });
          return completed;
-}
+  }
+
+  // removeTask(task: string): void
+  // {
+
+
+  //   let byeTask: TODOinterface
+  //   let task:
+  //   this.todolist.splice(byeTask.task.indexOf())
+  // }
 }
